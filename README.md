@@ -1,10 +1,10 @@
-# ⏱️ Round Robin Scheduler (Python + Tkinter)
+#  Planificador de procesos (Python + Tkinter)
 
-Este proyecto es un **simulador de planificación de procesos** utilizando el algoritmo **Round-Robin apropiativo**, desarrollado en **Python** con una interfaz gráfica construida con **Tkinter**.
+Este proyecto es un **Planificador procesos** utilizando el algoritmo **Round-Robin apropiativo**, desarrollado en **Python** con una interfaz gráfica construida con **Tkinter**.
 
 ---
 
-## 🎯 Características
+##  Características
 
 - Ingreso de procesos con tiempo de llegada y duración (burst time).
 - Ingreso del quantum del sistema operativo.
@@ -18,7 +18,7 @@ Este proyecto es un **simulador de planificación de procesos** utilizando el al
 
 ---
 
-## 📦 Tecnologías utilizadas
+##  Tecnologías utilizadas
 
 - Python 3.11+
 - Tkinter (interfaz gráfica)
@@ -26,7 +26,7 @@ Este proyecto es un **simulador de planificación de procesos** utilizando el al
 
 ---
 
-## 🚀 Ejecución del proyecto
+##  Ejecución del proyecto
 
 ### 1. Clona el repositorio
 
@@ -50,14 +50,14 @@ pipenv run python ui.py
 
 ---
 
-## 📸 Capturas de pantalla
+##  Capturas de pantalla
 
 <!-- Agrega aquí una imagen si lo deseas -->
 <!-- ![Interfaz](./screenshot.png) -->
 
 ---
 
-## 🧠 Teoría del algoritmo Round-Robin
+##  Teoría del algoritmo Round-Robin
 
 - Cada proceso se ejecuta por un tiempo fijo (quantum).
 - Si el proceso no finaliza, se interrumpe y vuelve al final de la cola.
@@ -66,7 +66,7 @@ pipenv run python ui.py
 
 ---
 
-## 📂 Estructura del proyecto
+##  Estructura del proyecto
 
 ```
 round-robin-scheduler/
@@ -81,12 +81,12 @@ round-robin-scheduler/
 
 ---
 
-## 🙌 Autor
+##  Autor
 
 - **[@jomax96](https://github.com/jomax96)**
 
 ---
 
-## 📄 Licencia
+##  Licencia
 
 Este proyecto está bajo la licencia MIT. Puedes usarlo, modificarlo y compartirlo libremente.
