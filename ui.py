@@ -4,23 +4,32 @@ from scheduler import Process, round_robin_scheduler
 
 
 class RoundRobinApp:
+    """
+    Interfaz gráfica principal de la aplicación Round-Robin usando Tkinter.
+
+    Permite al usuario:
+        - Ingresar procesos
+        - Definir el quantum
+        - Ejecutar el algoritmo
+        - Visualizar los resultados
+    """
     def __init__(self, root):
         self.root = root
         self.root.title("Planificador Round Robin")
 
         self.processes = []
 
-        # Quantum
+        # Entrada de Quantum
         tk.Label(root, text="Quantum:").grid(row=0, column=0, sticky="e")
         self.quantum_entry = tk.Entry(root)
         self.quantum_entry.grid(row=0, column=1)
 
-        # Tiempo de llegada
+        # Entrada de Tiempo de Llegada
         tk.Label(root, text="Tiempo de llegada:").grid(row=1, column=0, sticky="e")
         self.arrival_entry = tk.Entry(root)
         self.arrival_entry.grid(row=1, column=1)
 
-        # Duración
+        # Entrada de Duración
         tk.Label(root, text="Duración:").grid(row=2, column=0, sticky="e")
         self.burst_entry = tk.Entry(root)
         self.burst_entry.grid(row=2, column=1)
@@ -28,20 +37,23 @@ class RoundRobinApp:
         # Botón para agregar proceso
         tk.Button(root, text="Agregar Proceso", command=self.agregar_proceso).grid(row=3, column=0, columnspan=2, pady=5)
 
-        # Tabla de procesos agregados
+        # Tabla con procesos agregados
         self.tree = ttk.Treeview(root, columns=("Llegada", "Duración"), show="headings")
         self.tree.heading("Llegada", text="Llegada")
         self.tree.heading("Duración", text="Duración")
         self.tree.grid(row=4, column=0, columnspan=2, pady=10)
 
-        # Botón para ejecutar planificación
+        # Botón para ejecutar el algoritmo
         tk.Button(root, text="Ejecutar", command=self.ejecutar_planificacion).grid(row=5, column=0, columnspan=2)
 
-        # Resultados
+        # Área de resultados
         self.result_text = tk.Text(root, height=15, width=60)
         self.result_text.grid(row=6, column=0, columnspan=2, pady=10)
 
     def agregar_proceso(self):
+        """
+        Agrega un proceso a la lista y actualiza la tabla.
+        """
         try:
             arrival = int(self.arrival_entry.get())
             burst = int(self.burst_entry.get())
@@ -54,6 +66,9 @@ class RoundRobinApp:
             messagebox.showerror("Error", "Los campos deben ser números enteros")
 
     def ejecutar_planificacion(self):
+        """
+        Ejecuta el algoritmo Round-Robin y muestra los resultados en la interfaz.
+        """
         try:
             quantum = int(self.quantum_entry.get())
             if not self.processes:

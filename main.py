@@ -2,6 +2,12 @@ from scheduler import Process, round_robin_scheduler
 
 
 def get_process_input():
+    """
+    Solicita al usuario el ingreso de procesos desde consola.
+
+    Returns:
+        List[Process]: Lista de procesos con PID, tiempo de llegada y duración.
+    """
     print("=== INGRESO DE PROCESOS ===")
     num = int(input("¿Cuántos procesos deseas ingresar?: "))
     processes = []
@@ -16,6 +22,10 @@ def get_process_input():
 
 
 def main():
+    """
+    Punto de entrada del programa en consola.
+    Ejecuta la lógica de planificación Round-Robin con entrada desde el usuario.
+    """
     print("===== PLANIFICADOR ROUND ROBIN (APROPIATIVO) =====")
     quantum = int(input("Ingresa el quantum del sistema: "))
     processes = get_process_input()
