@@ -27,3 +27,5 @@ venv/
 
 # Test cache
 .pytest_cache/
+
+*.xml
