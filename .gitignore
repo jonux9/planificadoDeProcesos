@@ -1,0 +1,29 @@
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# pipenv
+Pipfile.lock
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Test cache
+.pytest_cache/
